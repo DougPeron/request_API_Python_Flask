@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quastão 2</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <section>
+        <lu class="users">
+            <!--Loop para tratar lista recebida-->
+            {% for i in range(0, len) %}   
+            <li class="user">
+                <img src="{{pic[i]}}" alt="{{pic[i]}}">
+                <div class="user-details">
+                    <h3>Nome: {{nomes[i]}}</h3>
+                    <p>E-Mail: {{emails[i]}}</p>
+                </div>                         
+            </li>
+            {% endfor %}
+        </lu>
+    </section>
+    
+</body>
+</html>
